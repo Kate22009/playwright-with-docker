@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "test": "playwright test --browser=all",
+   "test": "playwright test",
    "test-html-report": "playwright test --browser=all --reporter=html",
    "test-json-report": "PLAYWRIGHT_JSON_OUTPUT_NAME=results.json playwright test --browser=chromium --reporter=json"
   },
