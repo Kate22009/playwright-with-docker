@@ -10,7 +10,7 @@ test("Expect to have 3 packages for subscription", async ({ page }) => {
   await page.waitForLoadState('networkidle');
 
   // Get the number of basic virtual machine costs (1 CPU, 2 CPU, 4 CPU, 8 CPU)
-  const number_subscriptions_allowed = await page.locator('.PricingComparisonToolStyles__StyledCpuSelector-sc-1k0sndv-7 > button').count()
+  const number_subscriptions_allowed = await page.locator("//div[@id='see-what-you-can-save']//button").count()
 
   // Verify that number equals 4
   expect(number_subscriptions_allowed).toBe(4)

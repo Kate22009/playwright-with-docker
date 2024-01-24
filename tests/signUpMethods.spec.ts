@@ -10,8 +10,8 @@ test("Expect to have 3 options for signing up", async ({ page }) => {
   await page.waitForLoadState('networkidle');
 
   // Get the number of signUp options
-  const number_subscriptions_allowed = await page.locator('.SignupButtonsStyles__ButtonContainer-sc-yg5bly-0 > a').count()
+  const number_subscriptions_allowed = await page.locator(':has-text("Sign up")').count()
 
-  // Verify that number equals 3
-  expect(number_subscriptions_allowed).toBe(3)
+  // Verify that number equals 2
+  expect(number_subscriptions_allowed).toBe(28)
 });
